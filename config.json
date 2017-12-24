@@ -1,0 +1,21 @@
+{
+  // MINEECHO VERSION 0.1 NOTES:
+  // - In order to run, the bot needs a proper Minecraft account to access the server.
+  //   You can use your own account, or a seperate account designed for the bot.
+  //   If the server is in offline mode, a password isn't required.
+
+  // The token of your bot user. (Guide can be found in readme)
+  "token": "placeholder",
+  
+  // Prefix for commands built into the bot such as the about command.
+  "prefix": "!",
+  
+  // Account email and password, used to access the server.
+  "email": "placeholder",
+  "password": "placeholder",
+  
+  // The ip address and port of your server.
+  // If the port is default, leave it as 25565.
+  "host": "localhost",
+  "post": "25565"
+  }
