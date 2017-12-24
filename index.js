@@ -8,7 +8,7 @@ client.on('ready', () => {
   client.user.setGame(config.status);
 });
 
-client.on('message', message => {
+client.on('message', message => { if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
   if (message.content.toLowerCase() === config.prefix + `about`) {
     message.reply(`About test, blah blah blah..`);
