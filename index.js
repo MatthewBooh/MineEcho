@@ -20,7 +20,7 @@ client.on('ready', () => {
   } else { console.log(`Server client connected.`); console.log(`Startup finished.`); }
 });
 
-client.on('chat', function(packet) {
+serverclient.on('chat', function(packet) {
   
   var jsonMsg = JSON.parse(packet.message);
   if(jsonMsg.translate == 'chat.type.announcement' || jsonMsg.translate == 'chat.type.text') {
@@ -32,12 +32,12 @@ client.on('chat', function(packet) {
   }
 });
 
-client.on('message', message => { if (!message.content.startsWith(config.prefix) || message.author.bot) return;
-
-  if (message.content.toLowerCase() === config.prefix + `about`) {
-    message.reply(`About test, blah blah blah..`);
-  }
-  
-});
+client.on('message', message => { if (message.content.startsWith(config.prefix)) {
+    if (message.content.toLowerCase() === config.prefix + `about`) {
+      message.reply(`About test, blah blah blah..`);
+    }
+  } else {
+    serverclient.write('chat', {message: message.content.toString()});
+  }});
 
 client.login(config.token);
