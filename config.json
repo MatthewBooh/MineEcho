@@ -10,6 +10,9 @@
   // Prefix for commands built into the bot such as the about command.
   "prefix": "!",
   
+  // What you want the bot user to have under "Playing ...".
+  "status": "!about, running MineEcho v0.1",
+  
   // Account email and password, used to access the server.
   "email": "placeholder",
   "password": "placeholder",
