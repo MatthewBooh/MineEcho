@@ -2,7 +2,7 @@
 An open source self-host bot that can relay chat messages from a server to a Discord channel and can allow Discord users to send messages to a server.
 
 # Install and setup.
-1 | 2Install discord.js and minecraft-protocol:
+1 | Install discord.js and minecraft-protocol:
 ```js
 > npm i discord.js
 > npm i minecraft-protocol
@@ -14,7 +14,7 @@ An open source self-host bot that can relay chat messages from a server to a Dis
 
 4 | Open up the console and start the bot
 ```js
-> cd <directory to the folder with the files in it>
+> cd [directory path]
 > node index.js
 ```
 
